@@ -143,7 +143,7 @@ namespace SmsTimingTask.Services.Impl
             {
                 try
                 {
-                    filename = "Task1.csv";
+                    filename = Helper.GenerateFileName("Task1", "csv");
                     if (!string.IsNullOrWhiteSpace(outputPath))
                     {
                         Helper.createDirectory(outputPath);

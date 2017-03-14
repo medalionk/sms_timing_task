@@ -85,6 +85,17 @@ namespace SmsTimingTask
             Directory.CreateDirectory(path);
         }
 
+        /// <summary>
+        /// Generate a unique filename
+        /// </summary>
+        /// <param name="context">The filename context</param>
+        /// <param name="extension">The file extension</param>
+        /// <returns>The new file name</returns>
+        public static string GenerateFileName(string context, string extension)
+        {
+            return context + "_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") 
+                + "." + extension;          
+        }
 
         #region CSV Writer
 

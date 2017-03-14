@@ -1,11 +1,6 @@
 ﻿using log4net;
 using log4net.Config;
-using FirebirdSql.Data.FirebirdClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using SmsTimingTask.Services;
 using SmsTimingTask.Services.Impl;
@@ -80,9 +75,9 @@ namespace SmsTimingTask
             try
             {
                 string field = args[0];
-
+                //string field = "gender";
                 IProcess process = new DataProccess(logger, connectionString, outputPath);
-                process.Summary(field);
+                process.Summary(field.ToUpper());
             }
             catch (Exception ex)
             {
