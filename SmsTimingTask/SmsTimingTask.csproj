@@ -60,6 +60,7 @@
     <Compile Include="exceptions\CsvWriteException.cs" />
     <Compile Include="exceptions\DataAccessException.cs" />
     <Compile Include="exceptions\SmsTimingException.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
